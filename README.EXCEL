@@ -1,0 +1,34 @@
+# EDUBRIDGE EXCEL Assignment;
+syntax and parameters for the INDEX formula;
+
+=INDEX(array, row_num, column_num)
+
+# array – a range of cells where we want to get the data.
+# row_num – a number of a row in the array for which we want to get a value.
+# column_num – a column in the array which returns a value.
+
+syntax and parameters for the MATCH formula;
+
+=MATCH(lookup_value, lookup_array, [match_type])
+
+# lookup_value – a value that we want to find in the lookup_array.
+# lookup_array – the array where we want to find a value.
+# [match_type] – a type of match. We put 0 which is an exact match.
+
+
+syntax and parameters for the IFERROR formula;
+
+=IFERROR(value, value_if_error)
+
+# Value – a value that we want to check if it is an error. In our case, it will be a result of the function.
+# Value_if_error – value which we want to return instead of an error.
+
+syntax and parameters for the COUNTIF formula;
+
+COUNTIF(range,criteria)
+
+to count the number of cells that meet a criterion.
+
+formula:
+
+=IFERROR(INDEX(A6, MATCH(0, COUNTIF(B$1, A6:A21)+IF(COUNTIF(A6:A21, A6:A21)>1, 0, 1), 0)), "")
